@@ -5,17 +5,17 @@ from python_katas.utils import unittest_runner
 
 
 class TestSumOfElements(unittest.TestCase):
-    """
-    1 Katas
-    """
-
-    def sum_of_element(elements):
-        return sum(elements)
-
     def test_empty_list(self):
         lst = []
         self.assertEqual(questions.sum_of_element(lst), 0)
 
+    def test_single_element(self):
+        lst = [5]
+        self.assertEqual(questions.sum_of_element(lst), 5)
+
+    def test_multiple_elements(self):
+        lst = [1, 2, 3]
+        self.assertEqual(questions.sum_of_element(lst), 6)
 
 
 
@@ -35,8 +35,10 @@ class TestWordsConcatenation(unittest.TestCase):
     """
     1 Katas
     """
-
-
+    def test_concatenates_words_with_spaces(self):
+        words = ['take', 'me', 'home']
+        expected = 'take me home'
+        self.assertEqual(questions.words_concatenation(words), expected)
 
 
 class TestReverseWordsConcatenation(unittest.TestCase):
@@ -105,16 +107,20 @@ class TestSevenBoom(unittest.TestCase):
     """
 
 class TestCaesarCipher(unittest.TestCase):
-    """
-    1 Katas
-    """
+   def test_TestCaesarCipher(self):
+        stringx = "Fly Me To The Moon"
+        expected = "Iob Ph Wr Wkh Prrq"
+        self.assertEqual(questions.caesar_cipher(stringx), expected)
 
 
 class TestSumOfDigits(unittest.TestCase):
     """
     1 Katas
     """
-
+    def test_sum_of_digits(self):
+        nums =("51")
+        expected = 6
+        self.assertEqual(questions.sum_of_digits(nums), expected)
 
 
 if __name__ == '__main__':

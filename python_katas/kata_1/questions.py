@@ -262,9 +262,6 @@ def seven_boom(n):
     :return: list of integers
     """
     return None
-
-
-def caesar_cipher(str_to_encrypt):
     """
     2 Kata
 
@@ -276,13 +273,27 @@ def caesar_cipher(str_to_encrypt):
 
     :return:
     """
-    return None
+
+def caesar_cipher(text):
+    result = ''
+    for char in text:
+        if char == ' ':
+            result += ' '
+        elif char.islower():
+            result += chr((ord(char) - ord('a') + 3) % 26 + ord('a'))
+        elif char.isupper():
+            result += chr((ord(char) - ord('A') + 3) % 26 + ord('A'))
+    return result
+
+
 
 
 def sum_of_digits(digits_str):
     """
     1 Kata
 
+    
+    
     Calculates the sum of digits in a string (you can assume the input is a string containing numeric digits only)
 
     e.g.
@@ -294,7 +305,7 @@ def sum_of_digits(digits_str):
     :param digits_str: str of numerical digits only
     :return: int representing the sum of digits
     """
-    return None
+    return sum(int(digit) for digit in digits_str)
 
 
 if __name__ == '__main__':
@@ -302,20 +313,6 @@ if __name__ == '__main__':
     
 #Function sum_of_element 
 
-    print ("Function sum_of_element:")
-    print(sum_of_element([1, 2]))
-   
-#Function  verbing
-    print ("Function  verbing:")
-    print(verbing("hey"))
+    print ("Function call:")
 
-
-#words_concatenation
-
-print ("words_concatenation:")
-print(words_concatenation(['take', 'me', 'home']))
-
-#reverse_words_concatenation    
-print("reverse_words_concatenation:")
-print(reverse_words_concatenation(['take', 'me', 'home']))
 
