@@ -30,7 +30,12 @@ def verbing(word):
     :param word: str
     :return: Return the resulting string.
     """
-    return None
+    if len(word) == 2:
+        return word
+    elif word.endswith("ing"):
+        return word+ "ly"
+    else:
+        return word + "ing"
 
 
 def words_concatenation(words):
@@ -45,8 +50,8 @@ def words_concatenation(words):
     :param words: list of str
     :return: Return the resulting string.
     """
-    return None
-
+    ListResult= ' '.join(words)
+    return ListResult
 
 def reverse_words_concatenation(words):
     """
@@ -63,6 +68,7 @@ def reverse_words_concatenation(words):
     return None
 
 
+
 def is_unique_string(some_str):
     """
     2 Kata
@@ -77,7 +83,7 @@ def is_unique_string(some_str):
     :param some_str:
     :return: bool
     """
-    return None
+    return len(set(some_str)) == len(some_str)
 
 
 def list_diff(elements):
@@ -293,79 +299,23 @@ def sum_of_digits(digits_str):
 
 if __name__ == '__main__':
 
-    print('\nsum_of_element:\n--------------------')
+    
+#Function sum_of_element 
+
+    print ("Function sum_of_element:")
     print(sum_of_element([1, 2]))
-    print(sum_of_element([1, 3]))
-    # print(sum_of_element([4, 5, 6]))
-    #
-    # print('\nverbing:\n--------------------')
-    # print(verbing('walk'))
-    # print(verbing('swimming'))
-    # print(verbing('do'))
-    #
-    # print('\nwords_concatenation:\n--------------------')
-    # print(words_concatenation(['take', 'me', 'home']))
-    #
-    # print('\nreverse_words_concatenation:\n--------------------')
-    # print(reverse_words_concatenation(['take', 'me', 'home']))
-    #
-    # print('\nis_unique_string:\n--------------------')
-    # print(is_unique_string('aasdssdsederd'))
-    # print(is_unique_string('12345tgbnh'))
-    #
-    # print('\nlist_diff:\n--------------------')
-    # print(list_diff([1, 2, 3, 8, 77, 0]))
-    #
-    # print('\nprime_number:\n--------------------')
-    # print(prime_number(5))
-    # print(prime_number(22))
-    #
-    # print('\npalindrome_num:\n--------------------')
-    # print(palindrome_num(12221))
-    # print(palindrome_num(577))
-    #
-    # print('\npair_match:\n--------------------')
-    # print(pair_match(
-    #     {
-    #         "John": 20,
-    #         "Abraham": 45
-    #     },
-    #     {
-    #         "July": 18,
-    #         "Kim": 26
-    #     }
-    # ))
-    #
-    # print('\nbad_average:\n--------------------')
-    # print(bad_average(1, 2, 3))
-    #
-    # print('\nbest_student:\n--------------------')
-    # print(best_student({
-    #     "Ben": 78,
-    #     "Hen": 88,
-    #     "Natan": 99,
-    #     "Efraim": 65,
-    #     "Rachel": 95
-    # }))
-    #
-    # print('\nprint_dict_as_table:\n--------------------')
-    # print(print_dict_as_table({
-    #     "Ben": 78,
-    #     "Hen": 88,
-    #     "Natan": 99,
-    #     "Efraim": 65,
-    #     "Rachel": 95
-    # }))
-    #
-    # print('\nmerge_dicts:\n--------------------')
-    # print(merge_dicts({'a': 1}, {'b': 2}))
-    #
-    # print('\nseven_boom:\n--------------------')
-    # print(seven_boom(30))
-    #
-    # print('\ncaesar_cipher:\n--------------------')
-    # print(caesar_cipher('Fly Me To The Moon'))
-    #
-    # print('\nsum_of_digits:\n--------------------')
-    # print(sum_of_digits('1223432'))
+   
+#Function  verbing
+    print ("Function  verbing:")
+    print(verbing("hey"))
+
+
+#words_concatenation
+
+print ("words_concatenation:")
+print(words_concatenation(['take', 'me', 'home']))
+
+#reverse_words_concatenation    
+print("reverse_words_concatenation:")
+print(reverse_words_concatenation(['take', 'me', 'home']))
 
