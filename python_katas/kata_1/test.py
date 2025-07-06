@@ -65,6 +65,11 @@ class TestPrimeNumber(unittest.TestCase):
     """
     1 Katas
     """
+    def test_is_prime(self):
+        num = 2
+        expected = True
+        self.assertEqual(questions.is_prime(num), expected)
+        
 
 
 class TestPalindromeNum(unittest.TestCase):

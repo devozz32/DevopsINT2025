@@ -104,17 +104,13 @@ def list_diff(elements):
     return None
 
 
-def prime_number(num):
-    """
-    1 Kata
-
-    Check if the given number is prime or not.
-
-    hint: use the built-in function "range"
-    :param num: the number to check
-    :return: bool. True if prime, else False
-    """
-    return None
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
 
 
 def palindrome_num(num):
