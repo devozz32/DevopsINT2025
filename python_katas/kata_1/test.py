@@ -21,7 +21,7 @@ class TestSumOfElements(unittest.TestCase):
 
 class TestVerbing(unittest.TestCase):
     """
-    1 Katas
+   ## hello from nofar 1 Katas
     """
 
     def test_string_longer_than_3_not_include_ing(self):
